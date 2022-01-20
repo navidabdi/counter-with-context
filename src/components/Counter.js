@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
+import { useStateContext } from '../contexts/StateCounter';
 const Counter = () => {
-  const [counter, setCounter] = useState(0);
+  const { counter, setCounter } = useStateContext();
   return (
     <StyledCounter>
       <button onClick={() => setCounter(counter + 1)} className="plus">
