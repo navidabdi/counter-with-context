@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Counter = () => {
+  const [counter, setCounter] = useState(0);
   return (
     <StyledCounter>
-      <button className="plus">+</button>
-      <h2>Counter</h2>
-      <button className="mines">-</button>
+      <button onClick={() => setCounter(counter + 1)} className="plus">
+        +
+      </button>
+      <h2>{counter}</h2>
+      <button onClick={() => setCounter(counter - 1)} className="mines">
+        -
+      </button>
     </StyledCounter>
   );
 };
